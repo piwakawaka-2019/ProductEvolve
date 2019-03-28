@@ -1,0 +1,30 @@
+{
+  "name": "productevolve",
+  "version": "1.0.0",
+  "description": "An application to demonstrate a simple food service",
+  "main": "index.js",
+  "scripts": {
+    "debug": "nodemon --inspect index --ignore data.json",
+    "test": "jest --watchAll --noStackTrace",
+    "start": "node index"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piwakawaka-2019/ProductEvolve.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piwakawaka-2019/ProductEvolve/issues"
+  },
+  "homepage": "https://github.com/piwakawaka-2019/ProductEvolve#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2"
+  },
+  "devDependencies": {
+    "jest": "^24.5.0",
+    "nodemon": "^1.18.10"
+  }
+}
