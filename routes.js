@@ -11,6 +11,8 @@ router.get('/categories', (req,res) => {
     res.render('partials/categories', data);
 });
 
+
+
 router.get('/categories/:category', (req,res) => {
     let categoryName = req.params.category;
     let categoryObj = data.categories.find((category) => {
@@ -18,16 +20,24 @@ router.get('/categories/:category', (req,res) => {
 
     });
 
-    //let categoryObj2 = {};
-   // categoryObj2[categoryName] = categoryObj;
-    res.render('partials/products', categoryObj);
+    res.render('partials/products', {category:categoryObj});
 });
 
-router.get('/categories/burgers/:product', (req,res) => {
+
+
+router.get('/categories/:category/:product', (req,res) => {
+    let categoryName = req.params.category;
     let productName = req.params.product;
-    let productObj = {burger:'burger'}//data.categories.products.find((product) => {
-    //     return product.name == productName;
-    // });
+    
+    let categoryObj = data.categories.find((category) => {
+        return category.name == categoryName;
+    });
+
+    let productObj = categoryObj.Products.find((product) => {
+        return product.name == productName;
+    });
+
+
     res.render('partials/product', productObj);
 });
 

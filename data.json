@@ -4,7 +4,7 @@
   "id":"1",
   "name": "Burgers",
   "image": "burger.jpg",
-  "Products": [
+  "Products":[
   {
       "id": "1",
       "name": "Big Mac",
