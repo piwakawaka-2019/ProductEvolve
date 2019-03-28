@@ -1,6 +1,6 @@
-#Project Plan
+# Project Plan
 
-##MVP
+## MVP
 
 Display 6 categories on the root/home. E.g. Burgers, chips, ribs, nachos pizza
 
@@ -16,14 +16,14 @@ Product details:
 - Price
 
 
-##Additional Features
+## Additional Features
 
 Being able to add products prices to a total and perhaps checkout
 
 Add a product
 
 
-##Team Roles
+## Team Roles
 
 Fudz “back end”
 
@@ -37,7 +37,7 @@ Vinnie: “backend”
 
 
 
-##Milestones
+## Milestones
 
 
 Wireframes/design (Team)
