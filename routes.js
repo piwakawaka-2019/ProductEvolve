@@ -12,18 +12,22 @@ router.get('/categories', (req,res) => {
 });
 
 router.get('/categories/:category', (req,res) => {
-    let category = req.params.category;
+    let categoryName = req.params.category;
     let categoryObj = data.categories.find((category) => {
-        return category.name == category;
+        return category.name == categoryName;
+
     });
+
+    //let categoryObj2 = {};
+   // categoryObj2[categoryName] = categoryObj;
     res.render('partials/products', categoryObj);
 });
 
-router.get('/categories/category/:product', (req,res) => {
-    let product = req.params.product;
-    let productObj = data.categories.products.find((product) => {
-        return product.name == product;
-    });
+router.get('/categories/burgers/:product', (req,res) => {
+    let productName = req.params.product;
+    let productObj = {burger:'burger'}//data.categories.products.find((product) => {
+    //     return product.name == productName;
+    // });
     res.render('partials/product', productObj);
 });
 
