@@ -1,1 +1,10 @@
-<h1>{{name}}</h1>
+<h1>{{name}} Price: {{price}}</h1>
+
+
+
+<form class="form" action="/Categories/{{category}}/{{name}}" method="post">
+    <input type = "hidden" name ="id" value = "{{id}}" />
+    <input type = "hidden" name ="name" value = "{{name}}" />
+    <input type = "hidden" name ="price" value = "{{price}}" />
+  <input type="submit" name="" value="Add to cart">
+</form>
