@@ -3,6 +3,8 @@ const data = require('./data.json');
 
 const router = express.Router();
 
+router.use(express.static('public'))
+
 router.get('/', (req,res) => {
     res.redirect('/categories')
 });
@@ -18,6 +20,14 @@ router.get('/categories/:category', (req,res) => {
     });
     res.render('partials/products', products);
 });
+
+router.get('/logo.png', (req, res) => {
+    res.sendFile(__dirname + '/logo.png')
+})
+
+
+
+    
 
 // router.get('/categories/:id', (req,res) => {
 //     let id = req.params.id;

@@ -1,12 +1,161 @@
 {
   "categories": [
+  {
+  "id":"1",
+  "name": "Burgers",
+  "image": "burger.jpg",
+  "Products": [
+  {
+      "id": "1",
+      "name": "Big Mac",
+      "description": "description",
+      "price": "$5.00",
+      "image": "bigmac.jpg",
+      "link": "https://mcdonalds.co.nz/menu/big-mac"
+    },
     {
-      "id": 1,
-      "name": "Fido",
-      "owner": "Fred",
-      "image": "/images/puppy1.jpg",
-      "breed": "Labrador"
-    }
-
+      "id": "2",
+      "name": "Mc Chicken",
+      "description": "description",
+      "price": "$5.00",
+      "image": "mcchicken.jpg",
+      "link": "https://mcdonalds.co.nz/menu/mcchicken"
+    },
+    {
+      "id": "3",
+      "name": "The Boss",
+      "description": "description",
+      "price": "$5.00",
+      "image": "boss.jpg",
+      "link": "https://mcdonalds.co.nz/menu/boss"
+    },
+    {
+      "id": "4",
+      "name": "Fillet O Fish",
+      "description": "description",
+      "price": "$5.00",
+      "image": "fofish.jpg",
+      "link": "https://mcdonalds.co.nz/menu/filet-o-fish"
+  }  
   ]
+  },
+  {
+      "id":"2",
+      "name": "Fish and Chips",
+      "image": "fishandchip.jpg",
+
+      "Products": [
+    {
+      "id": "1",
+      "name": "Fish 1",
+      "description": "description",
+      "price": "$3.00",
+      "image": "Fish1.jpg",
+      "link": "https://www.thechippery.co.nz/"
+    },
+    {
+      "id": "2",
+      "name": "Fish 2",
+      "description": "description",
+      "price": "$3.00",
+      "image": "Fish2.jpg",
+      "link": "https://www.thechippery.co.nz/"
+    },
+    {
+      "id": "3",
+      "name": "Fish 3",
+      "description": "description",
+      "price": "$3.00",
+      "image": "Fish3.jpg",
+      "link": "https://www.thechippery.co.nz/"
+    },
+    {
+      "id": "4",
+      "name": "Fish 4",
+      "description": "description",
+      "price": "$3.00",
+      "image": "Fish4.jpg",
+      "link": "https://www.thechippery.co.nz/"
+  }    
+  ]
+  }, 
+  {
+  "id":"3",
+  "name": "Pizzas",
+  "image": "pizza.jpg",
+  "Products": [
+    {
+      "id": "1",
+      "name": "Hawaiian",
+      "description": "description",
+      "price": "$5.00",
+      "image": "Hawaiian.jpg",
+      "link": "https://www.dominos.co.nz/menu-pizza/hawaiian-P005"
+    },
+    {
+      "id": "2",
+      "name": "Pepperoni",
+      "description": "description",
+      "price": "$5.00",
+      "image": "Pepperoni.jpg",
+      "link": "https://www.dominos.co.nz/menu-pizza/pepperoni-P016"
+    },
+    {
+      "id": "3",
+      "name": "Beef and Onion",
+      "description": "description",
+      "price": "$5.00",
+      "image": "beefandonion.jpg",
+      "link": "https://www.dominos.co.nz/menu-pizza/beef-onion-P097"
+    },
+    {
+      "id": "4",
+      "name": "Vege Trio",
+      "description": "description",
+      "price": "$5.00",
+      "image": "VegeTrio.jpg",
+      "link": "https://www.dominos.co.nz/menu-pizza/veg-trio-P096"
+    }    
+  ]
+  },
+    {
+      "id":4,
+      "name": "Fried Chicken",
+      "image": "friedchicken.jpg",
+      "Products": [
+    {
+      "id": "1",
+      "name": "Fried Chicken 1",
+      "description": "description",
+      "price": "$3.50",
+      "image": "chicken1.jpg",
+      "link": "https://www.kfc.co.nz/"
+    },
+    {
+      "id": "2",
+      "name": "Fried Chicken 2",
+      "description": "description",
+      "price": "$3.50",
+      "image": "chicken2.jpg",
+      "link": "https://www.kfc.co.nz/"
+    },
+    {
+      "id": "3",
+      "name": "Fried Chicken 3",
+      "description": "description",
+      "price": "$3.50",
+      "image": "chicken3.jpg",
+      "link": "https://www.kfc.co.nz/"
+    },
+    {
+      "id": "4",
+      "name": "Fried Chicken 4",
+      "description": "description",
+      "price": "$3.50",
+      "image": "chicken4.jpg",
+      "link": "https://www.kfc.co.nz/"
+    }    
+  ]
+  }
+]
 }
