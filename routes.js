@@ -13,11 +13,21 @@ router.get('/categories', (req,res) => {
 
 router.get('/categories/:category', (req,res) => {
     let category = req.params.category;
-    let products = data.categories.find((category) => {
+    let categoryObj = data.categories.find((category) => {
         return category.name == category;
     });
-    res.render('partials/products', products);
+    res.render('partials/products', categoryObj);
 });
+
+router.get('/categories/category/:product', (req,res) => {
+    let product = req.params.product;
+    let productObj = data.categories.products.find((product) => {
+        return product.name == product;
+    });
+    res.render('partials/product', productObj);
+});
+
+
 
 // router.get('/categories/:id', (req,res) => {
 //     let id = req.params.id;
