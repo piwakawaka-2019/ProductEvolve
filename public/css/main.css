@@ -1,4 +1,19 @@
-img {
-    width:200px;
-    border-radius: 50%;
+body{
+
 }
+
+.logo{
+    height: 130px;
+    width: 130px;
+    display: block;
+    float: left;
+    margin-left: 40px;
+}
+
+.title{
+    text-align: center;
+    font-size: 200%;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
