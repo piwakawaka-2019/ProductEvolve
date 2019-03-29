@@ -1,7 +1,7 @@
 <h1>{{product.name}} Price: {{product.price}}</h1>
 
-<img src="/images/{{category}}/{{product.image}}"/>
-
+<img class="categories-images" src="/images/{{category}}/{{product.image}}"/>
+<p>{{product.description}}</p>
 <form class="form" action="/Categories/{{category}}/{{product.name}}" method="post">
     <input type = "hidden" name ="id" value = "{{product.id}}" />
     <input type = "hidden" name ="name" value = "{{product.name}}" />

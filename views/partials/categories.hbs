@@ -1,7 +1,8 @@
 <h1>Categories</h1>
   {{#each inventory.categories}}
-    <h2><a href="/Categories/{{name}}">{{name}}</a></h2>
-    <a href="/Categories/{{name}}"><img class="images" src="./images/{{name}}/{{image}}"/></a>
-    </div>
+ <div class="categories-images">
+   <h2><a href="/Categories/{{name}}">{{name}}</a></h2>
+   <a href="/Categories/{{name}}"><img class="images" src="./images/{{name}}/{{image}}"/></a>
+   </div>
   {{/each}}
 
