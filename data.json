@@ -47,7 +47,7 @@
       "Products": [
     {
       "id": "1",
-      "name": "Fish 1",
+      "name": "Cheesy Weezy Chips",
       "description": "description",
       "price": "$3.00",
       "image": "Fish1.jpg",
@@ -55,7 +55,7 @@
     },
     {
       "id": "2",
-      "name": "Fish 2",
+      "name": "Chips",
       "description": "description",
       "price": "$3.00",
       "image": "Fish2.jpg",
@@ -63,7 +63,7 @@
     },
     {
       "id": "3",
-      "name": "Fish 3",
+      "name": "Fish n Chips",
       "description": "description",
       "price": "$3.00",
       "image": "Fish3.jpg",
@@ -71,7 +71,7 @@
     },
     {
       "id": "4",
-      "name": "Fish 4",
+      "name": "Pork Buns",
       "description": "description",
       "price": "$3.00",
       "image": "Fish4.jpg",

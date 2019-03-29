@@ -1,28 +1,76 @@
-.body{
+body{
+    font-family: 'Poiret One', cursive;
+    text-decoration: none;
+}
 
+#top{
+    border-bottom-style: solid;
+    position: relative;
+}
+
+.logo{
+    height: 80px;
+    width: 120px;
+    display: block;
+    float: left;
+    margin-left: 40px;
+    margin-top: -20px;
+    text-align: center;
+    padding-right: 450px;
+}
+
+.title{
+    font-family: 'Poiret One', cursive;
+    margin-top: 25px;
+    margin-right: 20%;
+    font-size: 200%;
+    text-decoration: none;
 }
 
 .cube {
     background-color: #d8ce133b;
+    height: 700px;
     width: 90%;
     border: 0px solid green;
     padding: 25px;
-    margin: 25px;
-}
+    margin: 50px;
+ }
 
-
-.logo{
-    height: 130px;
-    width: 130px;
-    display: block;
-    float: left;
-    margin-left: 40px;
-}
-
-.title{
+ #categories{
+    margin-top: -25px;
+    margin-left: -10px;
+    font-family: 'Poiret One', cursive;
+    font-style: italic;
+    font-size: 250%;
+    text-decoration: solid;
     text-align: center;
-    font-size: 200%;
+ }
+
+ .categories-images{
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    float: left;
+}
+
+.categories-images, .images{
+    display: inline-block;
+    height: 350px;
+    width: 350px;
+    padding: 30px;
+}
+
+ 
+a:visited{
+    color: black;
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
+}
+
+a:hover{
+    color: blue;
+}
+
+a{
+    text-decoration: none;
 }
 
