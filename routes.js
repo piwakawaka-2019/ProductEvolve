@@ -1,5 +1,5 @@
 const express = require('express');
-const data = require('./data.json');
+const inventory = require('./inventory.json');
 const readWrites = require('./read-write');
 const cart = require('./cart.json');
 
@@ -7,11 +7,18 @@ const router = express.Router();
 
 router.use(express.static('public'))
 
+let data = {
+    inventory:inventory,
+    cart:cart
+}
+
+
 router.get('/', (req,res) => {
     res.redirect('/categories')
 });
 
 router.get('/categories', (req,res) => {
+
     res.render('partials/categories', data);
 });
 
@@ -19,12 +26,19 @@ router.get('/categories', (req,res) => {
 
 router.get('/categories/:category', (req,res) => {
     let categoryName = req.params.category;
-    let categoryObj = data.categories.find((category) => {
+    let categoryObj = data.inventory.categories.find((category) => {
         return category.name == categoryName;
 
     });
 
-    res.render('partials/products', {category:categoryObj});
+    
+    let customData = {
+        cart:data.cart,
+        category:categoryObj
+    }
+
+
+    res.render('partials/products', customData);
 });
 
 
@@ -33,7 +47,7 @@ router.get('/categories/:category/:product', (req,res) => {
     let categoryName = req.params.category;
     let productName = req.params.product;
     
-    let categoryObj = data.categories.find((category) => {
+    let categoryObj = data.inventory.categories.find((category) => {
         return category.name == categoryName;
     });
 
@@ -42,14 +56,18 @@ router.get('/categories/:category/:product', (req,res) => {
     });
 
     productObj.category = categoryName;
-    
 
-    res.render('partials/product', productObj);
+    let customData = {
+        cart:data.cart,
+        category:categoryName,
+        product:productObj
+    }
+
+    res.render('partials/product', customData);
 });
 
 router.post('/categories/:category/:product', (req,res) => {
-    let categoryName = req.params.category;
-    let productName = req.params.product;
+
     
 
     let newCartItem = {
@@ -68,7 +86,10 @@ router.post('/categories/:category/:product', (req,res) => {
         readWrites.write('./cart.json', dataToWrite);
     }
 
-    let categoryObj = data.categories.find((category) => {
+    let categoryName = req.params.category;
+    let productName = req.params.product;
+    
+    let categoryObj = data.inventory.categories.find((category) => {
         return category.name == categoryName;
     });
 
@@ -77,9 +98,14 @@ router.post('/categories/:category/:product', (req,res) => {
     });
 
     productObj.category = categoryName;
-    
 
-    res.render('partials/product', productObj);
+    let customData = {
+        cart:data.cart,
+        category:categoryName,
+        product:productObj
+    }
+
+    res.render('partials/product', customData);
 });
 
 router.get('/logo.png', (req, res) => {

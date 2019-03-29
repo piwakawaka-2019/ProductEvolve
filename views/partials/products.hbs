@@ -1,6 +1,7 @@
 <h1>{{category.name}}</h1>
 
   {{#each category.Products}}
-    <h2><a href="/Categories/{{../category.name}}/{{name}}">{{name}}:{{price}}</a></h2>
+    <img src="./images/{{../category.name}}/{{image}}"/>
+    <h2><a href="/Categories/{{../category.name}}/{{name}}">{{name}}:{{price}} </a></h2>
     <h2><a href="{{link}}">Vist this restaurant today!</a></h2>
   {{/each}}

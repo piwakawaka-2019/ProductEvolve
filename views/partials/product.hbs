@@ -1,10 +1,10 @@
-<h1>{{name}} Price: {{price}}</h1>
+<h1>{{product.name}} Price: {{product.price}}</h1>
 
+<img src="/images/{{category}}/{{product.image}}"/>
 
-
-<form class="form" action="/Categories/{{category}}/{{name}}" method="post">
-    <input type = "hidden" name ="id" value = "{{id}}" />
-    <input type = "hidden" name ="name" value = "{{name}}" />
-    <input type = "hidden" name ="price" value = "{{price}}" />
+<form class="form" action="/Categories/{{category}}/{{product.name}}" method="post">
+    <input type = "hidden" name ="id" value = "{{product.id}}" />
+    <input type = "hidden" name ="name" value = "{{product.name}}" />
+    <input type = "hidden" name ="price" value = "{{product.price}}" />
   <input type="submit" name="" value="Add to cart">
 </form>
