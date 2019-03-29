@@ -1,5 +1,7 @@
 const express = require('express');
 const data = require('./data.json');
+const readWrites = require('./read-write');
+const cart = require('./cart.json');
 
 const router = express.Router();
 
@@ -39,6 +41,43 @@ router.get('/categories/:category/:product', (req,res) => {
         return product.name == productName;
     });
 
+    productObj.category = categoryName;
+    
+
+    res.render('partials/product', productObj);
+});
+
+router.post('/categories/:category/:product', (req,res) => {
+    let categoryName = req.params.category;
+    let productName = req.params.product;
+    
+
+    let newCartItem = {
+        id: req.body.id,
+        name: req.body.name,
+        price: req.body.price
+    }
+
+    console.log('cart: ', cart);
+    cart.products.push(newCartItem);
+   
+
+    let dataToWrite = JSON.stringify(cart,null,2);
+
+    if (process.env.NODE_ENV != "test"){
+        readWrites.write('./cart.json', dataToWrite);
+    }
+
+    let categoryObj = data.categories.find((category) => {
+        return category.name == categoryName;
+    });
+
+    let productObj = categoryObj.Products.find((product) => {
+        return product.name == productName;
+    });
+
+    productObj.category = categoryName;
+    
 
     res.render('partials/product', productObj);
 });
